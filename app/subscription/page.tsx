@@ -19,6 +19,7 @@ export default function SubscriptionPage() {
           paragraphs: [
             <>Locky 计划提供周会员、年会员和终身会员。周会员与年会员为自动续订订阅；终身会员为一次性购买的非消耗型项目，不会自动续订。</>,
             <>中国大陆区计划价格为周会员 ¥28、年会员 ¥88、终身会员 ¥128。实际销售价格、币种、税费和可用商品以 App Store 购买确认页面为准，网页展示不构成价格保证。</>,
+            <>各方案解锁的会员能力以购买页面实时展示为准。购买前，Locky 会显示商品名称、周期、价格、试用资格以及主要权益；确认购买即表示你授权 Apple 按所选方案处理付款或续订。</>,
           ],
         },
         {
@@ -32,6 +33,7 @@ export default function SubscriptionPage() {
           title: "扣款与自动续订",
           paragraphs: [
             <>确认购买后，费用由 Apple 从当前 Apple 账户扣取。自动续订订阅会依照 App Store 显示的规则续订，直至你取消。续订日期、下一期价格、账单和价格变化通知以 Apple 提供的信息为准。</>,
+            <>同一订阅组内的试用或优惠资格通常每个 Apple 账户仅可享受一次，最终资格由 Apple 判断。若 Apple 调整价格或要求确认新价格，是否继续续订以 Apple 发出的通知及你的选择为准。</>,
           ],
         },
         {
@@ -65,6 +67,7 @@ export default function SubscriptionPage() {
           title: "其他条款",
           paragraphs: [
             <>本协议是《服务条款》的组成部分。Apple 标准最终用户许可协议同样适用于本应用：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>。</>,
+            <>我们可能因商品配置、平台规则或法律要求更新本协议，并在本页面更新生效日期。对会员条款有疑问，可联系 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。</>,
           ],
         },
       ]}

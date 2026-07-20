@@ -199,6 +199,12 @@ nav a:hover { color: var(--primary-deep); }
 .contact-details span { margin-top: 12px; color: rgba(255,255,255,.58); font-size: 12px; letter-spacing: .08em; }
 .contact-details a, .contact-details strong { font-size: 18px; font-weight: 650; text-decoration: none; }
 .support-warning { margin: 24px 0 0; color: var(--muted); font-size: 13px; }
+.wechat-support-panel { display: grid; grid-template-columns: 1fr 300px; align-items: center; gap: 70px; margin-top: 110px; padding: 46px; border: 1px solid rgba(104,89,244,.14); border-radius: 18px; background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(238,235,255,.88)); box-shadow: 0 28px 72px rgba(49,39,110,.11); }
+.wechat-support-panel h2 { margin: 0; font-size: 38px; letter-spacing: -.035em; }
+.wechat-support-panel p:not(.kicker) { max-width: 590px; color: var(--muted); line-height: 1.8; }
+.wechat-hours { font-size: 13px; }
+.wechat-qr { display: block; padding: 15px; border-radius: 16px; background: #fff; box-shadow: 0 18px 45px rgba(38,28,104,.13); }
+.wechat-qr img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
 
 .site-footer { border-top: 1px solid var(--line); background: rgba(255,255,255,.56); }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 44px; align-items: start; padding-top: 50px; padding-bottom: 42px; }
@@ -247,8 +253,10 @@ nav a:hover { color: var(--primary-deep); }
   .legal-content section { grid-template-columns: 34px 1fr; gap: 10px; padding: 30px 0; }
   .legal-content p { font-size: 15px; line-height: 1.85; }
   .support-main { padding-top: 55px; padding-bottom: 85px; }
-  .faq-section, .contact-panel { margin-top: 80px; }
+  .faq-section, .contact-panel, .wechat-support-panel { margin-top: 80px; }
   .contact-panel { grid-template-columns: 1fr; gap: 20px; padding: 30px 24px; border-radius: 15px; }
+  .wechat-support-panel { grid-template-columns: 1fr; gap: 28px; padding: 30px 24px; border-radius: 15px; }
+  .wechat-qr { width: min(100%, 300px); justify-self: center; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; gap: 15px 20px; }
 }

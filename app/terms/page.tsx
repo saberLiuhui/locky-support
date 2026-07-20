@@ -18,6 +18,7 @@ export default function TermsPage() {
           title: "接受条款",
           paragraphs: [
             <>下载、安装或使用 Locky，即表示你同意本服务条款和隐私政策。如果你不同意，请停止使用并删除本应用。</>,
+            <>本应用同时适用 Apple 标准最终用户许可协议（Standard EULA）。本条款与 Apple 标准协议不一致时，以适用法律及 Apple 对其平台服务的条款为准。</>,
           ],
         },
         {
@@ -53,6 +54,12 @@ export default function TermsPage() {
           ],
         },
         {
+          title: "服务变更与终止",
+          paragraphs: [
+            <>我们可能因功能调整、Apple 平台规则、法律要求或安全原因更新、暂停或停止部分功能。对于已购买的自动续订会员，我们会按照 Apple 的要求保障当前有效周期内已购买的权益；具体购买、取消和退款规则见《订阅协议》。</>,
+          ],
+        },
+        {
           title: "合理使用与责任",
           paragraphs: [
             <>你只能在自己有权管理的设备上使用 Locky，不得利用本应用侵害他人权益、规避法定监护、干扰他人设备或从事违法活动。因违反本条款或法律造成的后果由使用者承担。</>,
@@ -60,9 +67,9 @@ export default function TermsPage() {
           ],
         },
         {
-          title: "变更与联系",
+          title: "条款变更与联系",
           paragraphs: [
-            <>我们可能因功能、平台规则或法律要求更新服务和条款。重要变化会在 App 更新说明或本页面中公布。对本条款有疑问，请联系 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。</>,
+            <>我们可能因功能、平台规则或法律要求更新本条款。重要变化会在 App 更新说明或本页面中公布，并更新页面顶部日期。对本条款有疑问，请联系 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。</>,
           ],
         },
       ]}
