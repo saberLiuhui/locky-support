@@ -16,7 +16,7 @@ export const privacyDocument = {
           title: "适用范围与服务提供者",
           paragraphs: [
             <>本政策适用于 iOS 应用“Locky - 隐藏应用与应用锁”（以下简称“Locky”）。使用 Locky 即表示你已阅读并理解本政策中关于数据处理方式的说明。</>,
-            <>Locky 由本应用开发者提供和维护。隐私问题、数据处理疑问或权利请求可通过页面底部公布的支持邮箱联系我们。</>,
+            <>服务提供者：刘慧（个人开发者）。Apple 开发者账户登记名称以 App Store 展示名称为准。隐私问题、数据处理疑问或权利请求可通过支持邮箱 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> 联系我们。</>,
           ],
         },
         {
