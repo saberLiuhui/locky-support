@@ -6,14 +6,12 @@ export const metadata: Metadata = {
   description: "Locky 隐私政策：本机数据、系统权限、定位和 App Store 购买说明。",
 };
 
-export default function PrivacyPage() {
-  return (
-    <LegalPage
-      eyebrow="PRIVACY POLICY"
-      title="隐私政策"
-      summary="我们尽量让数据留在你的设备上，并清楚说明每一项系统权限的用途。"
-      updatedAt="更新日期：2026 年 7 月 21 日"
-      sections={[
+export const privacyDocument = {
+      eyebrow: "PRIVACY POLICY",
+      title: "隐私政策",
+      summary: "我们尽量让数据留在你的设备上，并清楚说明每一项系统权限的用途。",
+      updatedAt: "更新日期：2026 年 7 月 21 日",
+      sections: [
         {
           title: "适用范围与服务提供者",
           paragraphs: [
@@ -73,7 +71,9 @@ export default function PrivacyPage() {
             <>如对隐私处理有疑问，可发送邮件至 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。请勿在邮件中发送入口数字、Apple 账号密码或支付密码。</>,
           ],
         },
-      ]}
-    />
-  );
+      ],
+};
+
+export default function PrivacyPage() {
+  return <LegalPage {...privacyDocument} />;
 }

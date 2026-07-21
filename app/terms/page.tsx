@@ -6,14 +6,12 @@ export const metadata: Metadata = {
   description: "Locky 服务范围、安全恢复、系统限制与使用约定。",
 };
 
-export default function TermsPage() {
-  return (
-    <LegalPage
-      eyebrow="TERMS OF SERVICE"
-      title="服务条款"
-      summary="这些条款说明 Locky 能做什么、不能做什么，以及你在使用时需要了解的边界。"
-      updatedAt="更新日期：2026 年 7 月 21 日"
-      sections={[
+export const termsDocument = {
+      eyebrow: "TERMS OF SERVICE",
+      title: "服务条款",
+      summary: "这些条款说明 Locky 能做什么、不能做什么，以及你在使用时需要了解的边界。",
+      updatedAt: "更新日期：2026 年 7 月 21 日",
+      sections: [
         {
           title: "接受条款",
           paragraphs: [
@@ -72,7 +70,9 @@ export default function TermsPage() {
             <>我们可能因功能、平台规则或法律要求更新本条款。重要变化会在 App 更新说明或本页面中公布，并更新页面顶部日期。对本条款有疑问，请联系 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。</>,
           ],
         },
-      ]}
-    />
-  );
+      ],
+};
+
+export default function TermsPage() {
+  return <LegalPage {...termsDocument} />;
 }

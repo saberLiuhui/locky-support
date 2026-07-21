@@ -6,14 +6,12 @@ export const metadata: Metadata = {
   description: "Locky 会员免费试用、自动续订、终身会员、取消及恢复购买说明。",
 };
 
-export default function SubscriptionPage() {
-  return (
-    <LegalPage
-      eyebrow="MEMBERSHIP AGREEMENT"
-      title="订阅协议"
-      summary="会员购买完全通过 App Store 完成。购买前，请以 Apple 确认页面显示的价格和周期为准。"
-      updatedAt="更新日期：2026 年 7 月 21 日"
-      sections={[
+export const subscriptionDocument = {
+      eyebrow: "MEMBERSHIP AGREEMENT",
+      title: "订阅协议",
+      summary: "会员购买完全通过 App Store 完成。购买前，请以 Apple 确认页面显示的价格和周期为准。",
+      updatedAt: "更新日期：2026 年 7 月 21 日",
+      sections: [
         {
           title: "会员商品",
           paragraphs: [
@@ -70,7 +68,9 @@ export default function SubscriptionPage() {
             <>我们可能因商品配置、平台规则或法律要求更新本协议，并在本页面更新生效日期。对会员条款有疑问，可联系 <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>。</>,
           ],
         },
-      ]}
-    />
-  );
+      ],
+};
+
+export default function SubscriptionPage() {
+  return <LegalPage {...subscriptionDocument} />;
 }

@@ -180,6 +180,69 @@ nav a:hover { color: var(--primary-deep); }
 .legal-content p:last-child { margin-bottom: 0; }
 .legal-content a { color: var(--primary-deep); text-underline-offset: 3px; }
 
+.app-legal-page {
+  width: min(100%, 720px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 52px;
+}
+.app-legal-intro {
+  padding: 6px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+.app-legal-intro h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+}
+.app-legal-intro p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+.app-legal-intro span {
+  display: block;
+  margin-top: 13px;
+  color: #9695a6;
+  font-size: 12px;
+}
+.app-legal-content section {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.app-section-title {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.app-section-title span {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 760;
+}
+.app-section-title h2 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+}
+.app-legal-content p {
+  margin: 0 0 12px 36px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.82;
+}
+.app-legal-content p:last-child { margin-bottom: 0; }
+.app-legal-content a {
+  color: var(--primary-deep);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
 .support-main { padding-top: 88px; padding-bottom: 120px; }
 .support-hero { max-width: 780px; }
 .support-hero .back-link { margin-bottom: 62px; }
@@ -252,6 +315,7 @@ nav a:hover { color: var(--primary-deep); }
   .legal-main { padding-bottom: 85px; }
   .legal-content section { grid-template-columns: 34px 1fr; gap: 10px; padding: 30px 0; }
   .legal-content p { font-size: 15px; line-height: 1.85; }
+  .app-legal-page { padding: 20px 18px 44px; }
   .support-main { padding-top: 55px; padding-bottom: 85px; }
   .faq-section, .contact-panel, .wechat-support-panel { margin-top: 80px; }
   .contact-panel { grid-template-columns: 1fr; gap: 20px; padding: 30px 24px; border-radius: 15px; }

@@ -105,3 +105,38 @@ export function LegalPage({
     </div>
   );
 }
+
+export function InAppLegalPage({
+  title,
+  summary,
+  updatedAt,
+  sections,
+}: {
+  title: string;
+  summary: string;
+  updatedAt: string;
+  sections: LegalSection[];
+}) {
+  return (
+    <main className="app-legal-page">
+      <header className="app-legal-intro">
+        <h1>{title}</h1>
+        <p>{summary}</p>
+        <span>{updatedAt}</span>
+      </header>
+      <article className="app-legal-content">
+        {sections.map((section, index) => (
+          <section key={section.title}>
+            <div className="app-section-title">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h2>{section.title}</h2>
+            </div>
+            {section.paragraphs.map((paragraph, paragraphIndex) => (
+              <p key={paragraphIndex}>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+      </article>
+    </main>
+  );
+}
