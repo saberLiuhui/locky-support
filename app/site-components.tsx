@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const SUPPORT_EMAIL = "129324607@qq.com";
+export const SUPPORT_EMAIL = "elanl@qq.com";
 
 export function Brand({ large = false }: { large?: boolean }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
