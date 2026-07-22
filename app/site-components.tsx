@@ -4,7 +4,7 @@ import Image from "next/image";
 export const SUPPORT_EMAIL = "elanl@qq.com";
 
 export function Brand({ large = false }: { large?: boolean }) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const basePath = process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
     <span className={`brand ${large ? "brand-large" : ""}`}>
       <Image

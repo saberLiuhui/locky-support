@@ -11,23 +11,31 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "所选 App 没有被隐藏或限制？",
-    answer: "先在 Locky 的权限页面确认屏幕使用时间授权仍然有效，再停止保护并重新选择 App。如果系统权限异常，可使用“修复授权”；紧急情况下可执行“恢复全部 App”。",
+    answer: "先在 Locky 的“设置与支持”中检查保护权限，再回到“保护”页停止保护并重新选择 App。如果状态异常，可执行“恢复所有保护”。",
+  },
+  {
+    question: "隐藏 App 和限制 App 有什么区别？",
+    answer: "隐藏 App 会让所选 App 从桌面暂时消失；限制 App 会保留图标，打开时显示限制页面。两种方式都由系统执行，Locky 无法读取其他 App 的内容。",
   },
   {
     question: "如何恢复已经隐藏的 App？",
-    answer: "进入 Locky 的保护页面选择“恢复所选 App”。若无法进入或状态异常，请前往权限页面使用“恢复全部 App”。恢复功能不要求会员。",
+    answer: "进入 Locky 的“保护”页选择“恢复所选 App”。若无法进入或不确定哪些保护仍在生效，请到“设置与支持”顶部执行“恢复所有保护”。恢复功能不要求会员。",
   },
   {
-    question: "卸载 Locky 会自动恢复所有 App 吗？",
-    answer: "不保证。隐藏、限制以及禁止安装或删除由 iOS 系统执行，直接卸载 Locky 可能不会立即清除已生效的系统设置。卸载前请先在权限页面执行“恢复全部 App”，确认所选 App 已恢复后再卸载。",
+    question: "卸载 Locky 会自动恢复保护吗？",
+    answer: "不保证。隐藏、限制以及禁止安装或删除由系统执行，直接卸载 Locky 可能不会立即清除已生效的保护设置。卸载前请先执行“恢复所有保护”，确认所选 App 已恢复后再卸载。",
   },
   {
-    question: "开启禁止删除后，如何关闭？",
-    answer: "前往 Locky 的保护页面关闭“禁止删除 App”。若状态异常，请在权限页面执行“恢复全部 App”。禁止删除功能关闭和恢复不要求会员。",
+    question: "禁止安装和禁止删除怎么关闭？",
+    answer: "前往 Locky 的“保护”页，在“安装与删除保护”中关闭对应开关。禁止删除 App 免费；禁止安装 App 需要会员。无论会员状态如何，关闭和恢复操作都不会被拦住。",
   },
   {
     question: "为什么地点规则没有准时触发？",
-    answer: "检查定位权限、系统定位服务、后台刷新及低电量模式。地点触发由 iOS 调度，可能受信号和系统策略影响；建议选择较大的地点半径，并保留一个手动恢复方案。",
+    answer: "检查定位权限、定位服务和低电量模式。地点触发可能受信号、环境和系统策略影响；地点规则和坐标只保存在本机，建议选择较大的地点半径，并保留一个手动恢复方案。",
+  },
+  {
+    question: "计算器入口会影响其他 App 吗？",
+    answer: "不会。计算器入口只是 Locky 自身的可选打开方式，不是其他 App 的解锁页面。更换图标也只会改变 Locky 在桌面上的外观。",
   },
   {
     question: "已购买会员但没有生效？",
@@ -40,7 +48,7 @@ const faqs = [
 ];
 
 export default function SupportPage() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const basePath = process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   return (
     <div className="site-shell">
@@ -50,9 +58,9 @@ export default function SupportPage() {
           <Link href="/" className="back-link"><span aria-hidden="true">←</span> 支持中心</Link>
           <p className="kicker">LOCKY SUPPORT</p>
           <h1>遇到问题，<br />从这里开始。</h1>
-          <p>先查看常见处理方式；如仍未解决，可以通过微信客服或邮件联系我们。</p>
+          <p>先按下面的恢复方式排查；如仍未解决，可以通过微信客服或邮件联系我们。</p>
           <div className="hero-actions">
-            <a className="primary-action" href="#wechat-support">微信客服</a>
+            <a className="primary-action" href="#wechat-support">查看客服二维码</a>
             <a className="secondary-action" href={`mailto:${SUPPORT_EMAIL}?subject=Locky%20使用咨询`}>邮件支持</a>
           </div>
         </section>
@@ -87,7 +95,7 @@ export default function SupportPage() {
             href="https://work.weixin.qq.com/u/vc9bce6b6e98ee6b67?src=wx&bb=1aaa095ff9"
             target="_blank"
             rel="noreferrer"
-            aria-label="打开微信客服"
+            aria-label="查看微信客服二维码"
           >
             <Image
               src={`${basePath}/wechat-support-qr.png`}
@@ -103,7 +111,7 @@ export default function SupportPage() {
           <div>
             <p className="kicker">CONTACT</p>
             <h2 id="contact-title">联系我们</h2>
-            <p>请说明设备型号、iOS 版本、Locky 版本、发生问题的步骤，并尽量附上不包含敏感信息的截图。</p>
+            <p>请说明设备型号、系统版本、Locky 版本、发生问题的步骤，并尽量附上不包含敏感信息的截图。</p>
           </div>
           <div className="contact-details">
             <span>支持邮箱</span>

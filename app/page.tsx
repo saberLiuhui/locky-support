@@ -6,7 +6,7 @@ const documents = [
     href: "/privacy/",
     eyebrow: "PRIVACY",
     title: "隐私政策",
-    description: "了解 Locky 如何处理本机数据、系统权限、定位与购买信息。",
+    description: "了解 Locky 如何处理本机数据、保护权限、定位与购买信息。",
   },
   {
     href: "/terms/",
@@ -82,7 +82,7 @@ export default function Home() {
           <div>
             <span className="principle-index">02</span>
             <h3>权限透明</h3>
-            <p>只有在使用对应功能时才申请屏幕使用时间、定位或设备认证。</p>
+            <p>只有在使用对应功能时才申请保护权限、定位或身份验证。</p>
           </div>
           <div>
             <span className="principle-index">03</span>
