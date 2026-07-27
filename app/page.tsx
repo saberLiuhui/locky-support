@@ -18,7 +18,7 @@ const documents = [
     href: "/subscription/",
     eyebrow: "MEMBERSHIP",
     title: "订阅协议",
-    description: "查看免费试用、自动续订、终身会员、取消与恢复购买说明。",
+    description: "查看免费试用、自动续订、终身 VIP、取消与恢复购买说明。",
   },
   {
     href: "/support/",
