@@ -26,9 +26,26 @@ pnpm build:pages
 
 静态文件输出到 `out/`。
 
-## 推荐发布方案：Cloudflare Pages
+## 当前生产发布：阿里云轻量应用服务器
 
-Locky 官网推荐发布到 Cloudflare Pages。Cloudflare Pages 可以连接 GitHub 仓库自动部署，也可以手动上传 `out/` 目录。
+当前中国大陆生产域名：
+
+- 官网：`https://lockyapp.cn/`
+- 隐私政策：`https://lockyapp.cn/privacy/`
+- 技术支持：`https://lockyapp.cn/support/`
+- App 内法律页：`https://lockyapp.cn/app/privacy/`
+
+部署到阿里云：
+
+```bash
+scripts/deploy-aliyun.sh
+```
+
+脚本会重新构建 `out/`，并通过 `admin@47.98.151.172` 同步到 `/var/www/lockyapp/current`，然后 reload Nginx。默认 SSH key 为 `~/.ssh/lockyapp_deploy`。
+
+## 备用发布方案：Cloudflare Pages
+
+Locky 官网仍可发布到 Cloudflare Pages。Cloudflare Pages 可以连接 GitHub 仓库自动部署，也可以手动上传 `out/` 目录。
 
 Cloudflare Pages 构建参数：
 
