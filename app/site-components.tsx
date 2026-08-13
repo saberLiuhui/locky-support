@@ -24,13 +24,13 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand-link" aria-label="返回 Locky 支持中心首页">
+        <Link href="/" className="brand-link" aria-label="返回 Locky 官网首页">
           <Brand />
         </Link>
         <nav aria-label="主要导航">
+          <Link href="/#features">功能</Link>
+          <Link href="/#download">下载</Link>
           <Link href="/privacy/">隐私</Link>
-          <Link href="/terms/">条款</Link>
-          <Link href="/subscription/">订阅</Link>
           <Link href="/support/">支持</Link>
         </nav>
       </div>
@@ -44,7 +44,7 @@ export function Footer() {
       <div className="container footer-inner">
         <div>
           <Brand />
-          <p>隐藏应用与应用锁</p>
+          <p>保护 App，使用更可控。</p>
         </div>
         <div className="footer-links">
           <Link href="/privacy/">隐私政策</Link>
@@ -52,7 +52,12 @@ export function Footer() {
           <Link href="/subscription/">订阅协议</Link>
           <Link href="/support/">技术支持</Link>
         </div>
-        <p className="copyright">© 2026 Locky. 保留所有权利。</p>
+        <p className="copyright">
+          © 2026 Locky. 保留所有权利。
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+            皖ICP备2026025503号-1
+          </a>
+        </p>
       </div>
     </footer>
   );

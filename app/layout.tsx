@@ -5,10 +5,10 @@ const basePath = process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PAT
 
 export const metadata: Metadata = {
   title: {
-    default: "Locky 官方支持",
+    default: "Locky - App 保护与应用锁",
     template: "%s · Locky",
   },
-  description: "Locky - 隐藏应用与应用锁的官方支持、隐私政策、服务条款和订阅说明。",
+  description: "Locky 帮助你限制和自动保护自己选择的 App，支持时间规则、地点规则、恢复购买与安全恢复。",
   icons: {
     icon: `${basePath}/app-icon.png`,
     apple: `${basePath}/app-icon.png`,

@@ -22,7 +22,7 @@ export const termsDocument = {
         {
           title: "服务范围",
           paragraphs: [
-            <>Locky 使用 Apple Family Controls、Managed Settings、Device Activity 与 Core Location，在你授权并选择后管理本人设备上的 App。隐藏模式会让所选 App 图标暂时消失并停止启动；限制模式会保留图标，并由 iOS 显示系统限制界面。时间和地点规则跟随你选择的保护模式。</>,
+            <>Locky 使用 Apple Family Controls、Managed Settings、Device Activity 与 Core Location，在你授权并选择后管理本人设备上的 App。限制打开会保留所选 App 图标，并由 iOS 显示系统限制界面。时间和地点规则会在你启用后自动执行对应保护。</>,
             <>禁止安装 App 与禁止删除 App 是独立的设备级设置。停止普通保护不一定会清除这两项设置；你可在 Locky 的恢复入口中明确关闭或执行“恢复所有保护”。</>,
           ],
         },

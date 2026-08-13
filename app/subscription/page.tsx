@@ -10,7 +10,7 @@ export const subscriptionDocument = {
       eyebrow: "MEMBERSHIP AGREEMENT",
       title: "订阅协议",
       summary: "会员购买完全通过 App Store 完成。购买前，请以 Apple 确认页面显示的价格和周期为准。",
-      updatedAt: "更新日期：2026 年 7 月 21 日",
+      updatedAt: "更新日期：2026 年 8 月 4 日",
       sections: [
         {
           title: "会员商品",
@@ -38,6 +38,7 @@ export const subscriptionDocument = {
           title: "取消与管理订阅",
           paragraphs: [
             <>你可以在 iPhone“设置”中进入 Apple 账户的“订阅”，或访问 <a href="https://apps.apple.com/account/subscriptions">Apple 订阅管理页面</a>取消自动续订。取消后，会员权益通常会持续到当前已付费周期结束。</>,
+            <>周 VIP 与年 VIP 属于同一订阅组，方案切换、升级、降级、取消以及剩余周期处理以 Apple 订阅管理页面显示为准。已开通周或年 VIP 时，Locky 内可能只展示终身 VIP 买断入口。</>,
             <>Locky 无法代替你取消 Apple 订阅，也无法直接修改 Apple 的扣款日期。为了避免下一周期扣款，请按照 Apple 页面显示的截止时间提前取消。</>,
           ],
         },

@@ -20,10 +20,10 @@ Locky 官网是静态导出站点，Cloudflare Pages 只需要构建后发布 `o
 7. 不要添加 `PAGES_BASE_PATH` 或 `NEXT_PUBLIC_BASE_PATH`。Cloudflare Pages 发布在根路径，不需要仓库名前缀。
 8. 点击 `Save and Deploy`。
 
-部署完成后，Cloudflare 会生成类似下面的地址：
+部署完成后，Cloudflare 会生成类似下面的地址。当前生产正式域名以阿里云为准：
 
 ```text
-https://locky-support.pages.dev
+https://lockyapp.cn
 ```
 
 最终以上线后台实际展示的地址为准。
