@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Footer, Header } from "./site-components";
 
 const basePath = process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const downloadUrl = "https://lockyapp.cn/#download";
+const downloadUrl = "https://apps.apple.com/cn/app/locky-%E4%BF%9D%E6%8A%A4%E5%BA%94%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8%E9%94%81/id6792667900";
 
 const productLinks = [
   "限制打开",
@@ -182,12 +182,12 @@ export default function Home() {
             <p className="kicker">DOWNLOAD</p>
             <h2 id="download-title">扫码打开 Locky 下载页</h2>
             <p>
-              App Store 正式链接生成后，二维码会切换为直接下载地址。现在可先收藏官网，查看隐私、条款与支持信息。
+              Locky 已上架 App Store。扫码或点击下载按钮，即可前往 App Store 安装。
             </p>
             <div className="download-actions">
               <a className="app-store-button" href={downloadUrl}>
                 <span>App Store</span>
-                <strong>上线后可下载</strong>
+                <strong>立即下载</strong>
               </a>
               <Link className="secondary-action light" href="/support/">需要帮助</Link>
             </div>
@@ -203,7 +203,7 @@ export default function Home() {
               />
             </div>
             <span>扫描二维码</span>
-            <strong>lockyapp.cn</strong>
+            <strong>App Store 下载</strong>
           </div>
         </section>
 
